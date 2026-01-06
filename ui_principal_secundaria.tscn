@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://cogb5x6yb6dtm"]
+
+[ext_resource type="Script" uid="uid://b585dkfdldyar" path="res://ui_principal.gd" id="1_46e3t"]
+
+[node name="ui_principal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1921.0
+offset_bottom = 1076.0
+script = ExtResource("1_46e3t")
+
+[node name="Painel_Console" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1174.0
+offset_top = 26.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Painel_Console"]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 972.0
+offset_right = 397.0
+offset_bottom = 999.0
+
+[node name="Input_SQL" type="TextEdit" parent="Painel_Console"]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Painel_Missao" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 29.0
+offset_right = 1140.0
+offset_bottom = 539.0
+
+[node name="Painel_Resultados" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 548.0
+offset_right = 1141.0
+offset_bottom = 1051.0
+
+[node name="feedback_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 497.0
+offset_right = 161.0
+offset_bottom = 520.0

@@ -1,0 +1,166 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxk3y8vx3h4pl"]
+
+[ext_resource type="Script" uid="uid://dq6ygnlb8kkc3" path="res://tela_final.gd" id="1_tela_final"]
+[ext_resource type="Texture2D" uid="uid://dnwtcc2ecybj5" path="res://assets/imagens/Capa_jornal_final.png" id="2_capa_jornal"]
+[ext_resource type="Texture2D" uid="uid://b4wulec1hvho" path="res://assets/imagens/Ada_Lovelace_SQL.png" id="3_ada"]
+[ext_resource type="Texture2D" uid="uid://c8j4lam3n7p2q" path="res://assets/imagens/Ana_Luiza_SQL.png" id="4_ana_luiza"]
+[ext_resource type="Texture2D" uid="uid://cs5ds3eu1r7d6" path="res://assets/imagens/Delegado_Turing_SQL.png" id="5_delegado"]
+
+[node name="TelaFinal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tela_final")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+dragger_visibility = 2
+
+[node name="ImagemJornal" type="TextureRect" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_capa_jornal")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightPanel" type="VBoxContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 25
+
+[node name="Titulo" type="Label" parent="HSplitContainer/RightPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "CASO RESOLVIDO!"
+horizontal_alignment = 1
+
+[node name="PainelAda" type="Panel" parent="HSplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxAda" type="HBoxContainer" parent="HSplitContainer/RightPanel/PainelAda"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="ImagemAda" type="TextureRect" parent="HSplitContainer/RightPanel/PainelAda/HBoxAda"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("3_ada")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextoAda" type="Label" parent="HSplitContainer/RightPanel/PainelAda/HBoxAda"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ada: Impressionante, detetive! Você desvendou todo o esquema de Marcos. Sua habilidade com SQL foi crucial para reunir as evidências. O Delegado Turing está muito satisfeito!"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PainelAnaLuiza" type="Panel" parent="HSplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxAnaLuiza" type="HBoxContainer" parent="HSplitContainer/RightPanel/PainelAnaLuiza"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="ImagemAnaLuiza" type="TextureRect" parent="HSplitContainer/RightPanel/PainelAnaLuiza/HBoxAnaLuiza"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("4_ana_luiza")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextoAnaLuiza" type="Label" parent="HSplitContainer/RightPanel/PainelAnaLuiza/HBoxAnaLuiza"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Ana Luíza: Que trabalho espetacular! Carlos Silva já está recuperado e agradeceu pessoalmente. Você não apenas dominou SQL, mas também fez justiça. Parabéns, detetive!"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PainelDelegado" type="Panel" parent="HSplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxDelegado" type="HBoxContainer" parent="HSplitContainer/RightPanel/PainelDelegado"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="ImagemDelegado" type="TextureRect" parent="HSplitContainer/RightPanel/PainelDelegado/HBoxDelegado"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("5_delegado")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextoDelegado" type="Label" parent="HSplitContainer/RightPanel/PainelDelegado/HBoxDelegado"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Delegado Turing: Excelente trabalho, detetive! Sua expertise em SQL foi fundamental para desmantelar esse esquema criminoso. Você demonstrou habilidades investigativas excepcionais. A DataCorp e toda a cidade agradecem!"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer" type="Control" parent="HSplitContainer/RightPanel"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="BtnMenuPrincipal" type="Button" parent="HSplitContainer/RightPanel"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Voltar ao Menu Principal"
+
+[connection signal="pressed" from="HSplitContainer/RightPanel/BtnMenuPrincipal" to="." method="_on_btn_menu_principal_pressed"]

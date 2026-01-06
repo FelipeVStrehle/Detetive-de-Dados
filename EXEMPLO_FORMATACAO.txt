@@ -1,0 +1,56 @@
+═══════════════════════════════════════════════════════════════════════════════════
+EXEMPLO DE COMO OS CASOS APARECERÃO NO JOGO
+═══════════════════════════════════════════════════════════════════════════════════
+
+ANTES:
+------
+Caso 01: Mapeando o Território
+
+Ada: Delegado Turing, acabamos de receber o relatório de incidente...
+
+
+DEPOIS:
+-------
+═══════════════════════════════════════════════════
+▓▓▓ CASO 01: MAPEANDO O TERRITÓRIO ▓▓▓
+═══════════════════════════════════════════════════
+
+►►► ADA LOVELACE: Delegado Turing, acabamos de receber o relatório de incidente...
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+OUTRO EXEMPLO:
+═══════════════════════════════════════════════════
+▓▓▓ CASO 06: INVESTIGANDO A SUSPEITA ▓▓▓
+═══════════════════════════════════════════════════
+
+►►► DELEGADO TURING: Detetive, estou desconfiado da Sofia Alves...
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+OUTRO EXEMPLO:
+═══════════════════════════════════════════════════
+▓▓▓ CASO 09: QUEM CRIOU O ARQUIVO? ▓▓▓
+═══════════════════════════════════════════════════
+
+►►► ANA LUÍZA: Ada! Terminei a análise forense do arquivo...
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+DESTAQUES VISUAIS IMPLEMENTADOS:
+
+✓ Título do caso:
+  - Bordas com caracteres especiais (═══ e ▓▓▓)
+  - Texto TODO EM MAIÚSCULAS
+  - Três linhas de destaque (topo, título, base)
+
+✓ Nome do personagem:
+  - Setas indicativas (►►►)
+  - Nome completo em MAIÚSCULAS
+  - Destaque visual claro separando do texto
+
+✓ Resultado:
+  - Muito mais visível e chamativo
+  - Hierarquia visual clara
+  - Facilita identificação rápida de quem está falando
+  - Destaque profissional e elegante

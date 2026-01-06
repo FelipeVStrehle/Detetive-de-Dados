@@ -1,0 +1,144 @@
+[gd_scene load_steps=2 format=3 uid="uid://creditos_scene"]
+
+[ext_resource type="Script" path="res://creditos.gd" id="1_creditos"]
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_creditos")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="Titulo" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "CRÉDITOS"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="DesenvolvimentoTitulo" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Desenvolvimento"
+horizontal_alignment = 1
+
+[node name="Desenvolvedor" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Felipe Vasconcellos Strehle
+
+Tópicos em Desenvolvimento de Software
+Universidade Federal de Juiz de Fora"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="AudioTitulo" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Áudio"
+horizontal_alignment = 1
+
+[node name="AudioCredito" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Música Menu: Trevor Lentz
+Música Jogo: William Hector
+Música Final: X3nus
+Efeitos Sonoros: NenadSimic
+(Freesound.org)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer3" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="EngineTitulo" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Engine"
+horizontal_alignment = 1
+
+[node name="EngineCredito" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Godot Engine 4.5
+godot-sqlite (2mm-games)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer4" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="AgradecimentosTitulo" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Agradecimentos Especiais"
+horizontal_alignment = 1
+
+[node name="AgradecimentosTexto" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "A todos que contribuíram para tornar
+este projeto educacional uma realidade"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer5" type="Control" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BtnVoltar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Voltar ao Menu"
+
+[connection signal="pressed" from="BtnVoltar" to="." method="_on_btn_voltar_pressed"]

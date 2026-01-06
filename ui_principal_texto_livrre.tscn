@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqdcoyeu4isft"]
+
+[ext_resource type="Script" uid="uid://1excmrcep8ye" path="res://ui_principal_texto_livre.gd" id="1_see5o"]
+
+[node name="UI_Principal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_see5o")
+
+[node name="Painel_Console" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 692.0
+offset_right = 1153.0
+offset_bottom = 643.0
+
+[node name="Button" type="Button" parent="Painel_Console"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -56.0
+offset_right = 64.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Executar Query"
+
+[node name="Input_SQL" type="TextEdit" parent="Painel_Console"]
+layout_mode = 0
+offset_right = 457.0
+offset_bottom = 576.0
+placeholder_text = "Digite sua query SQL aqui..."
+wrap_mode = 1
+
+[node name="Painel_Missao" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 688.0
+offset_bottom = 374.0
+
+[node name="Label" type="Label" parent="Painel_Missao"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 14.0
+offset_right = 691.0
+offset_bottom = 63.0
+text = "Caso 01: O Café Desaparecido. 
+Precisamos de uma lista de todos os funcionários. Verifique a tabela 'funcionarios'"
+
+[node name="Painel_Resultados" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 377.0
+offset_right = 687.0
+offset_bottom = 645.0
+
+[node name="GridResultados" type="GridContainer" parent="Painel_Resultados"]
+layout_mode = 0
+offset_right = 687.0
+offset_bottom = 267.0
+columns = 3
+
+[connection signal="pressed" from="Painel_Console/Button" to="." method="_on_button_pressed"]

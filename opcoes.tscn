@@ -1,0 +1,301 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx3y8vx4h5pm"]
+
+[ext_resource type="Script" path="res://opcoes.gd" id="1_opcoes"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.3, 0.3, 0.35, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.6, 0.7, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(0.4, 0.4, 0.45, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7, 0.7, 0.8, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Opcoes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_opcoes")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="PainelPrincipal" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -350.0
+offset_right = 450.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PainelPrincipal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="PainelPrincipal/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Titulo" type="Label" parent="PainelPrincipal/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "OPÇÕES"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="PainelPrincipal/MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelPrincipal/MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="OpcoesContainer" type="VBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="AudioLabel" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "🔊 Áudio"
+
+[node name="VolumeMusica" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeMusica"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Volume Música:"
+
+[node name="Slider" type="HSlider" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeMusica"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="Valor" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeMusica"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="VolumeEfeitos" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeEfeitos"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Volume Efeitos:"
+
+[node name="Slider" type="HSlider" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeEfeitos"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="Valor" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeEfeitos"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="MutarAudio" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/MutarAudio"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Mutar Áudio:"
+
+[node name="CheckBox" type="CheckBox" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/MutarAudio"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2")
+
+[node name="HSeparator2" type="HSeparator" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="InterfaceLabel" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "🖥️ Interface"
+
+[node name="VelocidadeTexto" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VelocidadeTexto"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Velocidade do Texto:"
+
+[node name="OptionButton" type="OptionButton" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VelocidadeTexto"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+selected = 1
+popup/item_0/text = "Lenta"
+popup/item_0/id = 0
+popup/item_1/text = "Normal"
+popup/item_1/id = 1
+popup/item_2/text = "Rápida"
+popup/item_2/id = 2
+
+[node name="DicasAutomaticas" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/DicasAutomaticas"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Dicas Automáticas:"
+
+[node name="CheckBox" type="CheckBox" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/DicasAutomaticas"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2")
+
+[node name="HSeparator3" type="HSeparator" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="AcessibilidadeLabel" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "♿ Acessibilidade"
+
+[node name="TamanhoFonte" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/TamanhoFonte"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Tamanho da Fonte:"
+
+[node name="OptionButton" type="OptionButton" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/TamanhoFonte"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+selected = 1
+popup/item_0/text = "Pequeno"
+popup/item_0/id = 0
+popup/item_1/text = "Normal"
+popup/item_1/id = 1
+popup/item_2/text = "Grande"
+popup/item_2/id = 2
+
+[node name="HSeparator4" type="HSeparator" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="JogoLabel" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "🎮 Jogo"
+
+[node name="MostrarResultados" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/MostrarResultados"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Mostrar Resultados SQL:"
+
+[node name="CheckBox" type="CheckBox" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/MostrarResultados"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2")
+button_pressed = true
+
+[node name="ModoAprendizado" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/ModoAprendizado"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Modo Aprendizado:"
+
+[node name="CheckBox" type="CheckBox" parent="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/ModoAprendizado"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2")
+button_pressed = true
+
+[node name="HSeparator5" type="HSeparator" parent="PainelPrincipal/MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="BotoesInferiores" type="HBoxContainer" parent="PainelPrincipal/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BtnResetar" type="Button" parent="PainelPrincipal/MarginContainer/VBox/BotoesInferiores"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Resetar Padrão"
+
+[node name="BtnSalvar" type="Button" parent="PainelPrincipal/MarginContainer/VBox/BotoesInferiores"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Salvar e Voltar"
+
+[connection signal="value_changed" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeMusica/Slider" to="." method="_on_volume_musica_changed"]
+[connection signal="value_changed" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeEfeitos/Slider" to="." method="_on_volume_efeitos_changed"]
+[connection signal="toggled" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/MutarAudio/CheckBox" to="." method="_on_mutar_audio_toggled"]
+[connection signal="item_selected" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VelocidadeTexto/OptionButton" to="." method="_on_velocidade_texto_selected"]
+[connection signal="toggled" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/DicasAutomaticas/CheckBox" to="." method="_on_dicas_automaticas_toggled"]
+[connection signal="item_selected" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/TamanhoFonte/OptionButton" to="." method="_on_tamanho_fonte_selected"]
+[connection signal="toggled" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/MostrarResultados/CheckBox" to="." method="_on_mostrar_resultados_toggled"]
+[connection signal="toggled" from="PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/ModoAprendizado/CheckBox" to="." method="_on_modo_aprendizado_toggled"]
+[connection signal="pressed" from="PainelPrincipal/MarginContainer/VBox/BotoesInferiores/BtnResetar" to="." method="_on_btn_resetar_pressed"]
+[connection signal="pressed" from="PainelPrincipal/MarginContainer/VBox/BotoesInferiores/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
