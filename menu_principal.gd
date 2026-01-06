@@ -25,7 +25,7 @@ func _on_botao_iniciar_pressed():
 	# Para a música do menu antes de iniciar o jogo
 	Configuracoes.parar_musica()
 	# Usa nosso Gerenciador de Cenas global para ir para a cena de INTRODUÇÃO
-	GerenciadorCenas.trocar_cena("res://intro_terminal.tscn") # <-- Caminho atualizado
+	GerenciadorCenas.trocar_cena("res://intro_terminal.tscn")
 
 # Chamado quando o botão História do SQL é pressionado
 func _on_botao_historia_sql_pressed():

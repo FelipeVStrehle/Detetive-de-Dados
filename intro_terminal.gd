@@ -47,17 +47,15 @@ func _ready():
 
 	if prompt_continuar:
 		print("Nó 'prompt_continuar' encontrado com sucesso.")
-		# --- ADICIONAR DEFINIÇÃO DO TEXTO AQUI ---
 		prompt_continuar.text = "[ Pressione Enter para Iniciar Investigação ]" # Define o texto via script
-		# ----------------------------------------
 		prompt_continuar.visible = false # Garante que comece invisível
 		prompt_continuar.add_theme_color_override("font_color", Color("00FF00"))
-		prompt_continuar.add_theme_font_size_override("font_size", 24)  # Aumentado de 18 para 24
+		prompt_continuar.add_theme_font_size_override("font_size", 24)
 	else:
 		print("ERRO CRÍTICO: Nó 'prompt_continuar' NÃO encontrado!")
 
 	texto_briefing.add_theme_color_override("default_color", Color("00FF00"))
-	texto_briefing.add_theme_font_size_override("normal_font_size", 24)  # Aumentado de 20 para 24
+	texto_briefing.add_theme_font_size_override("normal_font_size", 24)
 
 	set_process(true)
 
@@ -79,7 +77,6 @@ func _process(delta):
 	if caractere_atual >= total_caracteres:
 		texto_terminou = true # Marca que terminou
 		if prompt_continuar:
-			# --- DEBUG DETALHADO ADICIONADO AQUI ---
 			if not prompt_continuar.visible: # Só executa o debug e torna visível uma vez
 				print("--- INSPECIONANDO prompt_continuar ANTES de torná-lo visível ---") # DEBUG
 				print("Texto: '", prompt_continuar.text, "'")                            # DEBUG
@@ -94,12 +91,11 @@ func _process(delta):
 				prompt_continuar.visible = true # Mostra o prompt
 				print("Definindo prompt como visível (depois): ", prompt_continuar.visible) # Confirmação # DEBUG
 				print("Texto concluído. Prompt visível.")
-			# --- FIM DO DEBUG DETALHADO ---
 		# else: # Desnecessário verificar 'else' aqui, já verificado no _ready
 
 		set_process(false) # Desabilita _process APÓS garantir que o prompt está visível (se existir)
 
-# --- FUNÇÃO _input ATUALIZADA ---
+# --- FUNÇÃO _input ---
 func _input(event):
 	# Verifica se foi pressionada a tecla Enter OU qualquer botão do mouse
 	var input_pressionado = event.is_action_pressed("ui_accept") or \
@@ -113,7 +109,6 @@ func _input(event):
 			texto_briefing.visible_characters = -1 # Revela tudo (-1 mostra todos)
 			texto_terminou = true # Marca que terminou
 			if prompt_continuar:
-				# --- DEBUG DETALHADO (Também na Aceleração) ---
 				if not prompt_continuar.visible: # Só executa o debug e torna visível uma vez
 					print("--- INSPECIONANDO prompt_continuar (Aceleração) ---") # DEBUG
 					print("Texto: '", prompt_continuar.text, "'")                 # DEBUG
@@ -127,7 +122,6 @@ func _input(event):
 
 					prompt_continuar.visible = true # Mostra o prompt imediatamente
 					print("Definindo prompt como visível (depois - Aceleração): ", prompt_continuar.visible) # Confirmação # DEBUG
-				# --- FIM DO DEBUG DETALHADO ---
 				print("Texto acelerado. Prompt visível.")
 			set_process(false) # Para o _process
 		else:

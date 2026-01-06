@@ -13,12 +13,7 @@ func _drop_data(_at_position, data):
 	var bloco_solto = Label.new()
 	bloco_solto.text = data
 
-	# --- CORREÇÃO IMPORTANTE: Configurar Mouse Filter ---
-	# Define como o Label interage com o mouse.
-	# Control.MOUSE_FILTER_STOP permite que ele receba inputs (como cliques)
-	# e impede que o input passe para nós abaixo dele.
 	bloco_solto.mouse_filter = Control.MOUSE_FILTER_STOP
-	# ---------------------------------------------------
 
 	# 2. Cria e configura o estilo (StyleBox)
 	var style_box = StyleBoxFlat.new()

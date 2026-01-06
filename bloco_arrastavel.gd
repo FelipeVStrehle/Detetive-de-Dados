@@ -1,6 +1,6 @@
 extends Button
 
-# Variável para guardar o texto do bloco (ex: "SELECT", "nome_completo")
+# Variável para guardar o texto do bloco
 var bloco_texto : String = ""
 
 # Variáveis para controle de duplo clique

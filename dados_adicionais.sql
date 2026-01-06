@@ -1,16 +1,6 @@
 -- ============================================================================
 -- DADOS ADICIONAIS PARA SQL ENIGMAS - O DETETIVE DE DADOS
 -- ============================================================================
--- Este arquivo adiciona mais dados ao banco para tornar as consultas mais ricas
--- Execute este arquivo para inserir dados adicionais nas tabelas existentes
--- ============================================================================
-
--- ============================================================================
--- PASSO 1: ADICIONAR NOVAS COLUNAS NAS TABELAS EXISTENTES
--- ============================================================================
--- IMPORTANTE: Se alguma coluna já existir, você verá um erro "duplicate column name"
--- Isso é normal e seguro - significa que a coluna já existe. O script continuará.
--- ============================================================================
 
 -- Adiciona colunas na tabela Funcionarios
 ALTER TABLE Funcionarios ADD COLUMN salario REAL;

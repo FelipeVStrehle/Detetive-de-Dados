@@ -9,7 +9,6 @@ var db = null
 var db_aberto = false
 
 func _ready():
-	# PROTEÇÃO: NÃO executa código de banco de dados no editor
 	if Engine.is_editor_hint():
 		print("Modo Editor detectado - inicialização de DB ignorada.")
 		return

@@ -1,10 +1,5 @@
 extends Control
 
-# ===================================
-# TELA DE OPÇÕES
-# ===================================
-# Interface para o jogador ajustar as configurações do jogo
-
 # Referências aos controles de áudio
 @onready var slider_musica = $PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeMusica/Slider
 @onready var label_musica = $PainelPrincipal/MarginContainer/VBox/ScrollContainer/OpcoesContainer/VolumeMusica/Valor

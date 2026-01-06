@@ -2,12 +2,6 @@
 -- SQL ENIGMAS - O DETETIVE DE DADOS
 -- SCRIPT DE CRIAÇÃO COMPLETA DO BANCO DE DADOS
 -- ============================================================================
--- Este script cria TODAS as tabelas do zero com dados completos
--- Execute este arquivo para criar um banco novo ou recriar o existente
---
--- ATENÇÃO: Este script irá APAGAR e RECRIAR todas as tabelas!
--- Faça backup do banco atual antes de executar!
--- ============================================================================
 
 -- Remove tabelas existentes (se houver)
 DROP TABLE IF EXISTS Alocacao_Projeto;

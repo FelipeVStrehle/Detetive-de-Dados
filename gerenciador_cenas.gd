@@ -1,8 +1,8 @@
 # No GerenciadorCenas.gd
 
-extends Node # Ou CanvasLayer, dependendo do nó raiz que você escolheu
+extends Node
 
-# Referências aos nós dentro desta cena (ajuste os caminhos se necessário)
+# Referências aos nós dentro desta cena
 @onready var fade_animator = $CanvasLayer/AnimationPlayer
 @onready var fade_rect = $CanvasLayer/ColorRect # Precisamos para garantir o estado inicial
 
@@ -11,20 +11,20 @@ func _ready():
 	if fade_rect:
 		fade_rect.modulate.a = 0.0 # Começa transparente
 
-# Função ATUALIZADA para trocar de cena com fade
+# Função para trocar de cena com fade
 func trocar_cena(caminho_da_cena):
 	print("Iniciando transição para: ", caminho_da_cena)
 
 	# 1. Toca a animação de fade out
 	if fade_animator:
 		fade_animator.play("fade_out")
-		# 2. ESPERA a animação terminar (IMPORTANTE!)
+		# 2. ESPERA a animação terminar
 		# 'await' pausa a execução desta função até o sinal ser emitido
 		await fade_animator.animation_finished
 		print("Fade out concluído.")
 	else:
 		print("Alerta: FadeAnimator não encontrado!")
-		# Se não houver animador, troca direto (comportamento antigo)
+		# Se não houver animador, troca direto
 		get_tree().change_scene_to_file(caminho_da_cena)
 		return # Sai da função aqui
 
